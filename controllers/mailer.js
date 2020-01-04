@@ -20,7 +20,7 @@ exports.sendInstructions = asyncWrapper(async (req, res, next) => {
 
 exports.sendMail = asyncWrapper(async (req, res, next) => {
 
-    const approvedSite = await ApprovedSite.findOne({ url: req.body.origin })
+    const approvedSite = await ApprovedSite.findOne({ url: req.body.origin }).select('+email')
 
     if (!approvedSite) {
         return next(new ErrorResponse('You are not authorised to send mail via MailRobin. Register to our approved sites list to use this feature, or update the origin in your request body.', 401))
