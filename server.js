@@ -19,7 +19,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 connectDB()
 app.use(express.json())
-app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
 
 // security
@@ -42,6 +41,9 @@ app.use('/api/v1/mailer', mailer)
 
 // errors
 app.use(errorHandler)
+
+// public
+app.use(express.static(path.join(__dirname, 'public')))
 
 // server
 const PORT = process.env.PORT | 5000
