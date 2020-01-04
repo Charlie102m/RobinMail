@@ -30,7 +30,7 @@ exports.sendMail = asyncWrapper(async (req, res, next) => {
         let transporter = await nodemailer.createTransport(mailerCredentials)
 
         let info = await transporter.sendMail({
-            from: process.env.MAIL_USER,
+            from: `RobinMail ${process.env.MAIL_USER}`,
             replyTo: req.body.email,
             to: approvedSite.email,
             subject: `${req.body.origin} | Contact Form Submission`,
