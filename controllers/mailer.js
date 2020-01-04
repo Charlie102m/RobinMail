@@ -39,7 +39,7 @@ exports.sendMail = asyncWrapper(async (req, res, next) => {
                         <p>\"<em>${req.body.message}</em>\"</p>`
         })
 
-        res.status(200).json(req.body)
+        res.status(200).json({ success: true, data: req.body })
 
     } catch (error) {
         return next(new ErrorResponse(error.message, 404))
