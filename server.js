@@ -46,8 +46,7 @@ app.use(errorHandler)
 app.use(express.static(path.join(__dirname, 'public')))
 
 // server
-const PORT = process.env.PORT | 5000
-app.listen(PORT, () => console.log(`SERVER RUNNING ON PORT : ${PORT}`.yellow.bold))
+app.listen(process.env.PORT || 5000, () => console.log(`SERVER RUNNING ON PORT : ${process.env.PORT || 5000}`.yellow.bold))
 
 // failsafe
 process.on('unhandledRejection', (error, promise) => {
