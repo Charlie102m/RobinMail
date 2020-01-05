@@ -37,7 +37,7 @@ Url's must be unique and only one destination email is currently supported per u
 ```bash
 Method: POST
 Type: RAW
-URL: http://www.robinmail.org/api/v1/approvedsites
+URL: https://www.robinmail.org/api/v1/approvedsites
 ```
 
 **_Headers:_**
@@ -66,7 +66,7 @@ This endpoint will allow you to check if your url is on the approved sites list.
 ```bash
 Method: GET
 Type:
-URL: http://www.robinmail.org/api/v1/approvedsites
+URL: https://www.robinmail.org/api/v1/approvedsites
 ```
 
 ## Mailer
@@ -88,7 +88,7 @@ Send a GET request here to see what is required.
 ```bash
 Method: GET
 Type:
-URL: http://www.robinmail.org/api/v1/mailer
+URL: https://www.robinmail.org/api/v1/mailer
 ```
 
 ### 2. Send Mail
@@ -100,7 +100,7 @@ Once your POST request is made, if successful your email will be sent to your re
 ```bash
 Method: POST
 Type: RAW
-URL: http://www.robinmail.org/api/v1/mailer
+URL: https://www.robinmail.org/api/v1/mailer
 ```
 
 **_Headers:_**
